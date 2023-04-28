@@ -31,7 +31,8 @@ router.post('/add', async(req, res) => {
     const {requester, clients} = req.body;
     const newTest = new Test({
       requester,
-      clients
+      clients,
+      date
     })
 
     const savedTest = await newTest.save();

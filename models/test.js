@@ -11,7 +11,8 @@ clientsSchema = new mongoose.Schema({
 
 const RequesterModel = new mongoose.Schema({
   requester: { type: String, required: true },
-  clients: [clientsSchema]
+  clients: [clientsSchema],
+  date: {type: String, required: true}
 });
 
 module.exports = mongoose.model('Tests', RequesterModel)
