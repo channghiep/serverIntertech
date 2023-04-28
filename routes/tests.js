@@ -28,7 +28,7 @@ router.get('/', async(req, res) => {
 router.post('/add', async(req, res) => {
   // console.log(req.body)
   try{
-    const {requester, clients} = req.body;
+    const {requester, clients, date} = req.body;
     const newTest = new Test({
       requester,
       clients,
