@@ -37,7 +37,7 @@ router.post('/add', async(req, res) => {
 
     const savedTest = await newTest.save();
 
-    res.status(201).json(savedTest)
+    res.status(201).json({res: "Success!"})
   }
   catch(err){
     res.status(500).json({error: 'Failed to create record'})
